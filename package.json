@@ -1,0 +1,53 @@
+{
+  "name": "google-search-automation-suite",
+  "version": "1.0.0",
+  "description": "Professional-grade test automation framework for Google search validation using Playwright and Page Object Model architecture",
+  "main": "tests/google-search.spec.js",
+  "scripts": {
+    "test": "npx playwright test --headed --reporter=html",
+    "test:headless": "npx playwright test --reporter=html",
+    "test:debug": "npx playwright test --debug",
+    "test:single": "npx playwright test --grep",
+    "test:ci": "npx playwright test --reporter=json",
+    "report": "npx playwright show-report",
+    "report:open": "npx playwright show-report playwright-report",
+    "install:browsers": "npx playwright install",
+    "lint": "eslint . --ext .js --fix",
+    "lint:check": "eslint . --ext .js",
+    "clean": "rimraf test-results playwright-report screenshots"
+  },
+  "keywords": [
+    "playwright",
+    "test-automation",
+    "javascript",
+    "page-object-model",
+    "google-search",
+    "e2e-testing",
+    "quality-assurance",
+    "professional-testing"
+  ],
+  "author": {
+    "name": "QA Engineer",
+    "email": "qa@themultiplegroup.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/google-search-automation"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "eslint": "^8.57.0"
+  },
+  "dependencies": {},
+  "type": "module",
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions"
+  ]
+}

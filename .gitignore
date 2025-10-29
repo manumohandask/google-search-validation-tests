@@ -1,0 +1,40 @@
+# Test Results and Reports
+test-results/
+!test-results/.gitkeep
+
+# Playwright browsers
+playwright/
+
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage
+coverage/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Playwright specific
+test-results/
+/test-results/
+/playwright-report/
+/playwright/.cache/
