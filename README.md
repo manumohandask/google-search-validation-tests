@@ -129,57 +129,7 @@ npm run test:report
 
 # Generate and open HTML report after test run
 npx playwright test && npx playwright show-report
-```
 
-## 📊 Test Reports & Artifacts
-
-### Report Types Generated:
-1. **HTML Report** - Interactive test results viewer
-2. **JSON Report** - Machine-readable test data
-3. **JUnit XML** - CI/CD integration format
-4. **Extent Report** - Professional test reporting
-5. **Screenshots** - Visual evidence of test execution
-6. **Videos** - Test execution recordings (on failure)
-7. **Traces** - Detailed debugging information
-
-### Accessing Reports:
-- HTML reports: `test-results/html-report/index.html`
-- Extent reports: `test-results/extent-report.html`
-- Screenshots: `test-results/screenshots/`
-- JSON data: `test-results/results.json`
-
-## 🔍 Test Features & Validations
-
-### Search Functionality Tests:
-- ✅ **Search Input Interaction** - Verify search field accepts input
-- ✅ **Search Execution** - Confirm search submits and loads results
-- ✅ **Results Display** - Validate search results are visible
-- ✅ **URL Verification** - Check search terms appear in URL
-- ✅ **Cookie Handling** - Automatic cookie acceptance
-
-### Content Validation:
-- ✅ **Relevancy Scoring** - Calculate result relevance percentage
-- ✅ **Keyword Validation** - Check for expected terms in results
-- ✅ **Title Analysis** - Validate search terms in result titles
-- ✅ **Description Analysis** - Check content descriptions
-- ✅ **Result Count** - Ensure minimum number of results
-
-### Performance Metrics:
-- ✅ **Search Response Time** - Measure search execution speed
-- ✅ **Page Load Performance** - Track page loading times
-- ✅ **Element Visibility** - Verify UI element response times
-- ✅ **Cross-Browser Performance** - Compare speeds across browsers
-
-## 🛠️ Configuration
-
-### Playwright Configuration (`playwright.config.js`):
-- **Multi-browser support** (Chrome, Firefox, Safari, Edge)
-- **Mobile device testing** (iOS, Android)
-- **Retry logic** for flaky tests
-- **Parallel execution** for faster test runs
-- **Screenshot on failure**
-- **Video recording** for failed tests
-- **Trace collection** for debugging
 
 ### Environment Variables:
 Create `.env` file for custom configuration:
