@@ -1,14 +1,9 @@
 import { expect } from '@playwright/test';
 
 /**
- * Google Search Page Object Model
- * 
  * This class encapsulates all interactions with Google's search functionality.
- * Implements the Page Object Model pattern for maintainable and reusable test code.
- * 
  * @class GoogleSearchPage
- * @author QA Engineering Team
- * @since 1.0.0
+ * @author Manu Mohan
  */
 export class GoogleSearchPage {
   /**
@@ -64,7 +59,7 @@ export class GoogleSearchPage {
       
     } catch (error) {
       console.log(`Search error: ${error.message}`);
-      // Graceful error handling - log but don't fail immediately
+      
     }
   }
 
@@ -149,7 +144,6 @@ export class GoogleSearchPage {
       
     } catch (error) {
       console.log(`Content analysis completed with warnings: ${error.message}`);
-      // Non-blocking validation - test continues
     }
   }
 
