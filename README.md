@@ -4,17 +4,17 @@ A comprehensive automated testing framework for validating Google search results
 
 ## 📋 Table of Contents
 
-- [Overview](#overview)
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Project Structure](#project-structure)
-- [Configuration](#configuration)
-- [Running Tests](#running-tests)
-- [Test Reports](#test-reports)
-- [Understanding the Tests](#understanding-the-tests)
-- [Customization](#customization)
-- [Troubleshooting](#troubleshooting)
+- [Overview](#-overview)
+- [Features](#-features)
+- [Prerequisites](#-prerequisites)
+- [Installation](#-installation)
+- [Project Structure](#-project-structure)
+- [Configuration](#-configuration)
+- [Running Tests](#-running-tests)
+- [Test Reports](#-test-reports)
+- [Understanding the Tests](#-understanding-the-tests)
+- [Customization](#-customization)
+- [Troubleshooting](#-troubleshooting)
 
 ## 🎯 Overview
 
