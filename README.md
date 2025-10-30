@@ -265,7 +265,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 👥 Authors
 
-- **Manu Mohan** - *Initial work* - [manumohandask](https://github.com/manumohandask)
+- **Manu Mohan**  - [manumohandask](https://github.com/manumohandask)
 
 ## 🙏 Acknowledgments
 
@@ -273,6 +273,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Follows Page Object Model design pattern
 - Inspired by modern test automation best practices
 
----
 
-**Happy Testing! 🚀**
