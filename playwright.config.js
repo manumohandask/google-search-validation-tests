@@ -5,7 +5,7 @@ export default defineConfig({
   timeout: 60000,
   retries: 1,
   use: {
-    headless: false, 
+    headless: false,
     viewport: { width: 1280, height: 800 },
     launchOptions: {
       args: ['--disable-blink-features=AutomationControlled', '--start-maximized'],
