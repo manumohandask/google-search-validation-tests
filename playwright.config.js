@@ -11,9 +11,9 @@ export default defineConfig({
       args: ['--disable-blink-features=AutomationControlled', '--start-maximized'],
       channel: 'chrome'
     },
-    screenshot: 'on', // Take screenshots for all tests
-    video: 'on',      // Record videos for all tests
-    trace: 'on'       // Enable tracing for all tests
+    screenshot: 'on', 
+    video: 'on',      
+    trace: 'on'       
   },
   reporter: [['list'], ['html', { outputFolder: 'playwright-report' }]]
 });

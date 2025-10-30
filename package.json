@@ -27,12 +27,8 @@
     "professional-testing"
   ],
   "author": {
-    "name": "QA Engineer",
-    "email": "qa@themultiplegroup.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/username/google-search-automation"
+    "name": "Manu Mohan",
+    "email": "manumohandask@gmail.com"
   },
   "license": "MIT",
   "engines": {

@@ -1,4 +1,26 @@
 {
   "baseUrl": "https://www.google.com",
-  "searchPhrases": ["Valletta", "The Multiple", "Ftira"]
+  "captureScreenshots": false,
+  "searchPhrases": [
+    {
+      "term": "Valletta",
+      "expectedKeywords": ["malta", "capital", "city", "mediterranean"],
+      "description": "Capital city of Malta"
+    },
+    {
+      "term": "The Multiple",
+      "expectedKeywords": ["multiple", "themultiple", "company", "website"],
+      "description": "The Multiple company/website"
+    },
+    {
+      "term": "Ftira",
+      "expectedKeywords": ["malta", "bread", "maltese", "food", "traditional"],
+      "description": "Traditional Maltese bread"
+    },
+    {
+      "term": "Playwright",
+      "expectedKeywords": ["automation", "testing", "browser", "microsoft", "test"],
+      "description": "Microsoft Playwright testing framework"
+    }
+  ]
 }

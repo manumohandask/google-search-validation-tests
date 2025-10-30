@@ -67,9 +67,10 @@ export class GoogleSearchPage {
    * Comprehensive validation of Google search results
    * Performs technical and content-specific validations
    * @param {string} phrase - The search phrase to validate results for
+   * @param {Array<string>} expectedKeywords - Array of keywords that should appear in search results
    * @throws {Error} If any validation fails
    */
-  async validateSearchResults(phrase) {
+  async validateSearchResults(phrase, expectedKeywords = []) {
     console.log(`Validating search results for: ${phrase}`);
     
     try {
@@ -88,8 +89,8 @@ export class GoogleSearchPage {
       console.log(`Current URL contains search: ${url.includes('search')}`);
       expect(url).toContain('google.com');
       
-      // Content Validation: Search-term specific validation
-      await this.validateSpecificContent(phrase);
+      // Content Validation: keyword-based validation
+      await this.validateGenericContent(phrase, expectedKeywords);
       
       console.log('All validations completed successfully');
       
@@ -100,46 +101,42 @@ export class GoogleSearchPage {
   }
 
   /**
-   * Validates search-term specific content in results
-   * Performs intelligent content analysis based on the search phrase
+   * Validates search results content using generic keyword matching
+   * Performs intelligent content analysis based on expected keywords
    * @param {string} phrase - The search phrase to validate content for
+   * @param {Array<string>} expectedKeywords - Array of keywords expected in search results
    * @private
    */
-  async validateSpecificContent(phrase) {
+  async validateGenericContent(phrase, expectedKeywords = []) {
     console.log(`Analyzing search results content for: ${phrase}`);
+    console.log(`Expected keywords: [${expectedKeywords.join(', ')}]`);
     
     try {
       const pageText = await this.page.textContent('body');
       const lowerText = pageText.toLowerCase();
+      const foundKeywords = [];
       
-      // Search-term specific intelligent validation
-      switch (phrase.toLowerCase()) {
-        case 'valletta':
-          if (lowerText.includes('malta') || lowerText.includes('capital')) {
-            console.log('Verified Valletta-related content: Malta/Capital references found');
-          } else {
-            console.log('Standard search results displayed for Valletta');
-          }
-          break;
-          
-        case 'the multiple':
-          if (lowerText.includes('multiple') || lowerText.includes('themultiple.com')) {
-            console.log('Verified The Multiple-related content: Company/Website references found');
-          } else {
-            console.log('Standard search results displayed for The Multiple');
-          }
-          break;
-          
-        case 'ftira':
-          if (lowerText.includes('malta') || lowerText.includes('bread')) {
-            console.log('Verified Ftira-related content: Malta/Bread references found');
-          } else {
-            console.log('Standard search results displayed for Ftira');
-          }
-          break;
-          
-        default:
-          console.log(`Generic content validation completed for: ${phrase}`);
+      // Check for each expected keyword in the page content
+      for (const keyword of expectedKeywords) {
+        if (lowerText.includes(keyword.toLowerCase())) {
+          foundKeywords.push(keyword);
+        }
+      }
+      
+      // Validation results
+      if (foundKeywords.length > 0) {
+        console.log(`✓ Found relevant keywords: [${foundKeywords.join(', ')}]`);
+        console.log(`Content validation successful: ${foundKeywords.length}/${expectedKeywords.length} keywords found`);
+      } else if (expectedKeywords.length === 0) {
+        console.log(' No specific keywords provided - generic search validation completed');
+      } else {
+        console.log(` No expected keywords found in results for: ${phrase}`);
+        console.log('Results may be generic or search term may need adjustment');
+      }
+      
+      // Additional validation: Check if search term itself appears in results
+      if (lowerText.includes(phrase.toLowerCase())) {
+        console.log(`✓ Search term "${phrase}" found in results`);
       }
       
     } catch (error) {

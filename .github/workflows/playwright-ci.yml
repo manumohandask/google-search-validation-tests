@@ -85,17 +85,17 @@ jobs:
     if: always()
     
     steps:
-    - name: 📊 Test Summary Report
+    - name:  Test Summary Report
       run: |
-        echo "## 🎭 Playwright Test Automation Results" >> $GITHUB_STEP_SUMMARY
+        echo "## Playwright Test Automation Results" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
-        echo "### 🔍 Search Term Validation Tests" >> $GITHUB_STEP_SUMMARY
-        echo "- ✅ Valletta Search Test" >> $GITHUB_STEP_SUMMARY
-        echo "- ✅ The Multiple Search Test" >> $GITHUB_STEP_SUMMARY  
-        echo "- ✅ Ftira Search Test" >> $GITHUB_STEP_SUMMARY
+        echo "###  Search Term Validation Tests" >> $GITHUB_STEP_SUMMARY
+        echo "-  Valletta Search Test" >> $GITHUB_STEP_SUMMARY
+        echo "- The Multiple Search Test" >> $GITHUB_STEP_SUMMARY  
+        echo "-  Ftira Search Test" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
-        echo "### 🏆 Professional Standards Met" >> $GITHUB_STEP_SUMMARY
-        echo "- 📱 Multi-browser compatibility testing" >> $GITHUB_STEP_SUMMARY
-        echo "- 🎬 Video recording for failed tests" >> $GITHUB_STEP_SUMMARY
-        echo "- 📊 Comprehensive HTML reporting" >> $GITHUB_STEP_SUMMARY
+        echo "### Professional Standards Met" >> $GITHUB_STEP_SUMMARY
+        echo "-  Multi-browser compatibility testing" >> $GITHUB_STEP_SUMMARY
+        echo "-  Video recording for failed tests" >> $GITHUB_STEP_SUMMARY
+        echo "-  Comprehensive HTML reporting" >> $GITHUB_STEP_SUMMARY
         
